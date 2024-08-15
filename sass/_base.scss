@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+$clr-gunmetal: #4d4f62;
+$clr-green: #44d3d2;
+$clr-red: #ea5454;
+$clr-yellow: #fcae4a;
+$clr-blue: #549ef2;
+
+$fontsize-largeheading: clamp(1.5rem, calc(1rem + 2vw), 2.25rem);
+$fontsize-largeparagraph: 0.9375rem;
+$fontsize-smallheading: 1.25rem;
+$fontsize-smallparagraph: 0.8125rem;
+
+$font-stack: "Poppins", sans-serif;
+
+$gap-spacing: 1.5rem;
+
+@mixin top-border($clr) {
+  border-top: 0.5rem solid $clr;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  font-family: $font-stack;
+  color: $clr-gunmetal;
+}

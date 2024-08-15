@@ -1,0 +1,11 @@
+@use "css_reset";
+@use "base";
+@use "header";
+@use "main";
+
+footer {
+  font-size: 0.7rem;
+  padding: 1rem;
+  justify-self: flex-end;
+  margin-top: auto;
+}

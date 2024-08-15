@@ -1,0 +1,24 @@
+@use "base";
+
+header {
+  text-align: center;
+  margin: 4rem 1.5rem;
+  max-width: 34rem;
+
+  h1 {
+    font-size: base.$fontsize-largeheading;
+    font-weight: 200;
+    margin-top: 2rem;
+  }
+
+  h2 {
+    font-size: base.$fontsize-largeheading;
+    font-weight: 600;
+    margin: 0.5rem;
+  }
+
+  p {
+    font-size: base.$fontsize-largeparagraph;
+    font-weight: 200;
+  }
+}

@@ -1,0 +1,75 @@
+@use "base";
+
+main {
+  margin: 2rem 1.5rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  gap: base.$gap-spacing;
+
+  article {
+    padding: 1.2rem;
+    box-shadow: 2px 2px 8px #00000022;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    h2 {
+      font-size: base.$fontsize-smallheading;
+    }
+
+    p {
+      font-size: base.$fontsize-smallparagraph;
+    }
+
+    img {
+      width: 4rem;
+      align-self: flex-end;
+      margin-top: 2rem;
+    }
+
+    &.supervisor {
+      @include base.top-border(base.$clr-green);
+    }
+    &.team-builder {
+      @include base.top-border(base.$clr-red);
+    }
+    &.karma {
+      @include base.top-border(base.$clr-yellow);
+    }
+    &.calculator {
+      @include base.top-border(base.$clr-blue);
+    }
+  }
+}
+
+@media screen and (min-width: 69rem) {
+  main {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, minmax(5rem, 22rem));
+    grid-template-rows: repeat(4, 1fr);
+
+    .supervisor,
+    .calculator {
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
+
+    .team-builder,
+    .karma {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    .team-builder {
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    .karma {
+      grid-row-start: 3;
+      grid-row-end: 5;
+    }
+  }
+}
