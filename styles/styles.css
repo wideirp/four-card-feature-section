@@ -141,6 +141,7 @@ main article h2 {
 }
 main article p {
   font-size: 0.8125rem;
+  font-weight: 200;
 }
 main article img {
   width: 4rem;
